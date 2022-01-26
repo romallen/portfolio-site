@@ -20,19 +20,19 @@ const Header = () => {
                <h1>
                 {data.headerTagline[0]
                   ? data.headerTagline[0]
-                  : ""}
+                  : "Building"}
               </h1>
               <h1>
                 {" "}
                 {data.headerTagline[1]
                   ? data.headerTagline[1]
-                  : ""}
+                  : "products"}
               </h1>
               <h1>
                 {" "}
                 {data.headerTagline[2]
                   ? data.headerTagline[2]
-                  : ""}
+                  : "and experiences"}
               </h1>
             </div>
           </Fade>
