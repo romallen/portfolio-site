@@ -2,7 +2,7 @@ import React from "react"
 import Card from "./atoms/Card"
 import Fade from "react-reveal/Fade"
 
-import data from "../yourdata"
+import data from "../data"
 
 const Work = () => {
   return (
@@ -10,7 +10,7 @@ const Work = () => {
       <div className="container">
         <div className="work-wrapper">
           <Fade bottom>
-            <h1>Work</h1>
+            <h1>Projects</h1>
           </Fade>
 
           <div className="grid">
@@ -21,7 +21,8 @@ const Work = () => {
                   heading={project.title}
                   paragraph={project.para}
                   imgUrl={project.imageSrc}
-                  projectLink={project.url}
+                  projectLink={project.urlRepo}
+                  repoLink={project.urlApp}
                 ></Card>
               ))}
             </Fade>

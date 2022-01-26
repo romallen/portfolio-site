@@ -1,6 +1,6 @@
 import React from "react"
 import Fade from "react-reveal/Fade"
-import data from "../yourdata"
+import data from "../data"
 
 const Header = () => {
   return (
@@ -20,7 +20,7 @@ const Header = () => {
                <h1>
                 {data.headerTagline[0]
                   ? data.headerTagline[0]
-                  : "Building"}
+                  : "I build"}
               </h1>
               <h1>
                 {" "}
@@ -39,7 +39,7 @@ const Header = () => {
           <Fade bottom>
             <p>{data.headerParagraph}</p>
           </Fade>
-          <Fade bottom>
+          {/* <Fade bottom>
             <a
               href={`mailto:${
                 data.contactEmail ? data.contactEmail : "romallen1@gmail.com"
@@ -48,7 +48,7 @@ const Header = () => {
             >
               CONNECT WITH ME
             </a>
-          </Fade>
+          </Fade> */}
         </div>
       </div>
     </div>

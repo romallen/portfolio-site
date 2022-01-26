@@ -11,6 +11,7 @@ import githubIcon from "./images/github.svg"
 import codepenIcon from "./images/codepen.svg"
 import dribbbleIcon from "./images/dribbble.svg"
 import instagramIcon from "./images/instagram.svg"
+import linkedinIcon from "./images/linkedin.svg"
 
 export default {
   //(Please Do Not Remove The comma(,) after every variable)
@@ -20,7 +21,7 @@ export default {
   name: "Romaine",
   headerTagline: [
     //Line 1 For Header
-    "Building digital",
+    "I build digital",
     //Line 2 For Header
     "products",
      "and experiences",
@@ -44,7 +45,8 @@ export default {
       imageSrc:
         "https://s3.ap-northeast-1.amazonaws.com/romallen.com/images/emina_text.png",
       //Project URL - Add Your Project Url Here
-      url: "https://github.com/YACT-jp/e-mina-backend",
+      urlRepo: "https://github.com/YACT-jp/e-mina-backend",
+      urlApp: "https://play.google.com/store/apps/details?id=com.reactnativehello",
     },
     {
       title: "JSE Web Scraper", //Project Title - Add Your Project Title Here
@@ -54,7 +56,8 @@ export default {
       imageSrc:
         "https://s3.ap-northeast-1.amazonaws.com/romallen.com/images/JSE+STOCK+APP.png",
       //Project URL - Add Your Project Url Here
-      url: "https://github.com/romallen/jse-stock-scraper",
+      urlRepo: "https://github.com/romallen/jse-stock-scraper",
+      urlApp: "https://romallen.com/chart.html",
     },
     {
       title: "Truck Stop Finder", //Project Title - Add Your Project Title Here
@@ -64,7 +67,8 @@ export default {
       imageSrc:
         "https://s3.ap-northeast-1.amazonaws.com/romallen.com/images/truckstop.png",
       //Project URL - Add Your Project Url Here
-      url: "https://github.com/romallen/Truck-Stop-Finder",
+      urlRepo: "https://github.com/romallen/Truck-Stop-Finder",
+      uurlApp: "http://truck-stop-searcher.herokuapp.com/",
     },
     {
       title: "Quiz Game CRUD API", //Project Title - Add Your Project Title Here
@@ -74,7 +78,8 @@ export default {
       imageSrc:
         "https://s3.ap-northeast-1.amazonaws.com/romallen.com/images/crud-API.jpeg",
       //Project URL - Add Your Project Url Here
-      url: "https://github.com/romallen/Quiz-Game-API-Project",
+      urlRepo: "https://github.com/romallen/Quiz-Game-API-Project",
+      urlApp: "https://reqbin.com/8kljaach",
     },
    /* {
       title: "Jeopardy", //Project Title - Add Your Project Title Here
@@ -124,32 +129,32 @@ export default {
     {
       img: htmlIcon,
       para:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
+        "",
     },
     {
       img: cssIcon,
       para:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
+        "",
     },
     {
       img: jsIcon,
       para:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
+        "",
     },
     {
       img: reactIcon,
       para:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
+        "",
     },
     {
       img: designIcon,
       para:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
+        "",
     },
     {
       img: codeIcon,
       para:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
+        "",
     },
   ],
 
@@ -160,19 +165,12 @@ export default {
   contactSubHeading: "",
   social: [
     // Add Or Remove The Link Accordingly
-    { img: githubIcon, url: "https://github.com/chetanverma16" },
+    { img: githubIcon, url: "https://github.com/romallen" },
     {
-      img: codepenIcon,
-      url: "https://www.codepen.com/",
+      img: linkedinIcon,
+      url: "https://www.linkedin.com/in/romaine-allen/",
     },
-    {
-      img: dribbbleIcon,
-      url: "https://dribbble.com/chetanverma",
-    },
-    {
-      img: instagramIcon,
-      url: "https://www.instagram.com/",
-    },
+ 
   ],
 
   // End Contact Section ---------------
