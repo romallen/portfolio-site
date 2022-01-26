@@ -22,9 +22,7 @@ export default {
     //Line 1 For Header
     "Building digital",
     //Line 2 For Header
-    "products, brands,",
-    //Line 3 For Header
-    "and experience",
+    "products and experience",
   ],
   //   Header Paragraph
   headerParagraph:
@@ -113,7 +111,7 @@ export default {
 
   // About Secton --------------
   aboutParaOne:
-    "I am a software engineer who currently resides in Japan. I have had a lifelong fascination with all things tech and I am especially excited about the future possibilities of cloud computing. In a previous life I also dabbled in video editing and graphic design.",
+    "",
 
   //   End About Section ---------------------
 
@@ -156,16 +154,9 @@ export default {
 
   // End Skills Section --------------------------
 
-  //   Promotion Section --------------------------
-
-  promotionHeading: "Heading",
-  promotionPara:
-    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-  // End Promotion Section -----------------
-
   //   Contact Section --------------
 
-  contactSubHeading: "Let's create your next experience together",
+  contactSubHeading: "Contact Info",
   social: [
     // Add Or Remove The Link Accordingly
     { img: githubIcon, url: "https://github.com/chetanverma16" },
