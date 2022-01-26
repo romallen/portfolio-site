@@ -22,7 +22,7 @@ export default {
     //Line 1 For Header
     "Building digital",
     //Line 2 For Header
-    "products and experience",
+    "products and experiences",
   ],
   //   Header Paragraph
   headerParagraph:
@@ -75,7 +75,7 @@ export default {
       //Project URL - Add Your Project Url Here
       url: "https://github.com/romallen/Quiz-Game-API-Project",
     },
-    {
+   /* {
       title: "Jeopardy", //Project Title - Add Your Project Title Here
       para:
         "A quiz game built using React Native", // Add Your Service Type Here
@@ -95,7 +95,7 @@ export default {
       //Project URL - Add Your Project Url Here
       url: "http://chetanverma.com/",
     },
-
+*/
     /*
     If You Want To Add More Project just Copy and Paste This At The End
     ,{
