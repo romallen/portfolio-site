@@ -157,7 +157,7 @@ export default {
 
   //   Contact Section --------------
 
-  contactSubHeading: "Contact Info",
+  contactSubHeading: "",
   social: [
     // Add Or Remove The Link Accordingly
     { img: githubIcon, url: "https://github.com/chetanverma16" },
