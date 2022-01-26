@@ -23,7 +23,7 @@ export default {
     "Building digital",
     //Line 2 For Header
     "products and experiences",
-  ]*/,
+  ],*/
   //   Header Paragraph
   headerParagraph:
     "I am a software engineer who currently resides in Japan. I have had a lifelong fascination with all things tech and I am especially excited about the future possibilities of cloud computing. In a previous life I also dabbled in video editing and graphic design.",
