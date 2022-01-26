@@ -110,9 +110,9 @@ export default {
   // End Work Section -----------------------
 
   // About Secton --------------
-  aboutParaOne:
+  /*aboutParaOne:
     "",
-
+*/
   //   End About Section ---------------------
 
   // Skills Section ---------------
