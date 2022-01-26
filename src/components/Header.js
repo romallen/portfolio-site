@@ -15,18 +15,18 @@ const Header = () => {
               </span>
             </h2>
           </Fade>
-          /*<Fade bottom cascade>
+          <Fade bottom cascade>
             <div className="heading-wrapper">
                <h1>
                 {data.headerTagline[0]
                   ? data.headerTagline[0]
-                  : "Software Engineer"}
+                  : ""}
               </h1>
               <h1>
                 {" "}
                 {data.headerTagline[1]
                   ? data.headerTagline[1]
-                  : "products"}
+                  : ""}
               </h1>
               <h1>
                 {" "}
@@ -35,7 +35,7 @@ const Header = () => {
                   : ""}
               </h1>
             </div>
-          </Fade>*/
+          </Fade>
           <Fade bottom>
             <p>{data.headerParagraph}</p>
           </Fade>
