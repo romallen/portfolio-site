@@ -32,10 +32,11 @@
     }
 
     .btn {
+      display: block;
       background-color: black;
       color: white;
       padding: 10px;
-      margin: 20px;
+      margin: 5px;
       text-decoration: none;
     }
     &:hover {
@@ -43,7 +44,7 @@
       transform: translate(0, 0px);
       height: auto;
       background-color: rgba(80, 78, 78, 0.788);
-   padding: 30px;
+      padding: 15px;
     }
   }
 }
