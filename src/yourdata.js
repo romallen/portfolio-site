@@ -48,44 +48,44 @@ export default {
       url: "https://github.com/YACT-jp/e-mina-backend",
     },
     {
-      title: "Project Two", //Project Title - Add Your Project Title Here
+      title: "JSE Web Scraper", //Project Title - Add Your Project Title Here
       para:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.", // Add Your Service Type Here
+        "Data scraping and charting app for Jamaica Stock Exchange trading data.", // Add Your Service Type Here
       //Project Image - Add Your Project Image Here
       imageSrc:
-        "https://images.unsplash.com/photo-1605153864431-a2795a1b2f95?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MXwyNTY3ODl8fGVufDB8fHw%3D&auto=format&fit=crop&w=400&q=60",
+        "https://s3.ap-northeast-1.amazonaws.com/romallen.com/images/JSE+STOCK+APP.png",
       //Project URL - Add Your Project Url Here
-      url: "http://chetanverma.com/",
+      url: "https://github.com/romallen/jse-stock-scraper",
     },
     {
-      title: "Project Three", //Project Title - Add Your Project Title Here
+      title: "Truck Stop Finder", //Project Title - Add Your Project Title Here
       para:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.", // Add Your Service Type Here
+        "A web app that helps travelers find and filter truck stops on a map.", // Add Your Service Type Here
       //Project Image - Add Your Project Image Here
       imageSrc:
-        "https://images.unsplash.com/photo-1504083898675-c896ecdae86e?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjJ8fHBhc3RlbHxlbnwwfHwwfA%3D%3D&auto=format&fit=crop&w=400&q=60",
+        "https://s3.ap-northeast-1.amazonaws.com/romallen.com/images/truckstop.png",
       //Project URL - Add Your Project Url Here
-      url: "http://chetanverma.com/",
+      url: "https://github.com/romallen/Truck-Stop-Finder",
     },
     {
-      title: "Project Four", //Project Title - Add Your Project Title Here
+      title: "Quiz Game CRUD API", //Project Title - Add Your Project Title Here
       para:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.", // Add Your Service Type Here
+        "A CRUD API service for a quiz game using Express.js, Node.js, Prisma & PostgreSQL.", // Add Your Service Type Here
       //Project Image - Add Your Project Image Here
       imageSrc:
-        "https://images.unsplash.com/photo-1492171983775-a51717616c0d?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8NjB8fHBhc3RlbHxlbnwwfHwwfA%3D%3D&auto=format&fit=crop&w=400&q=60",
+        "https://s3.ap-northeast-1.amazonaws.com/romallen.com/images/crud-API.jpeg",
       //Project URL - Add Your Project Url Here
-      url: "http://chetanverma.com/",
+      url: "https://github.com/romallen/Quiz-Game-API-Project",
     },
     {
-      title: "Project Five", //Project Title - Add Your Project Title Here
+      title: "Jeopardy", //Project Title - Add Your Project Title Here
       para:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.", // Add Your Service Type Here
+        "A quiz game built using React Native", // Add Your Service Type Here
       //Project Image - Add Your Project Image Here
       imageSrc:
         "https://images.unsplash.com/photo-1534239143101-1b1c627395c5?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8NzZ8fHBhc3RlbHxlbnwwfHwwfA%3D%3D&auto=format&fit=crop&w=400&q=60",
       //Project URL - Add Your Project Url Here
-      url: "http://chetanverma.com/",
+        url: "https://github.com/romallen/QuizApp",
     },
     {
       title: "Project Six", //Project Title - Add Your Project Title Here
