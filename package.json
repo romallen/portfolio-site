@@ -3,7 +3,7 @@
   "private": true,
   "description": "Portfolio Template For Awesome Peoples",
   "version": "0.1.0",
-  "author": "Chetan Verma <hello@chetanverma.com>",
+  "author": "Romaine Allen",
   "dependencies": {
     "gatsby": "^2.26.1",
     "gatsby-image": "^2.11.0",
