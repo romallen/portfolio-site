@@ -1,10 +1,11 @@
 {
-  "name": "react-portfolio-template",
+  "name": "react-portfolio",
   "private": true,
-  "description": "Portfolio Template For Awesome Peoples",
+  "description": "Portfolio",
   "version": "0.1.0",
-  "author": "Chetan Verma <hello@chetanverma.com>",
+  "author": "Romaine Allen",
   "dependencies": {
+    "amplify": "^0.0.11",
     "gatsby": "^2.26.1",
     "gatsby-image": "^2.11.0",
     "gatsby-plugin-manifest": "^2.6.1",
@@ -15,14 +16,19 @@
     "gatsby-plugin-smoothscroll": "^1.2.0",
     "gatsby-source-filesystem": "^2.5.0",
     "gatsby-transformer-sharp": "^2.6.0",
-    "mozjpeg": "^8.0.0",
+    "highcharts": "^9.3.2",
     "node-sass": "^4.0.0",
-    "prop-types": "^15.7.2",
+    "prop-types": "^15.8.1",
     "react": "^16.14.0",
-    "react-dom": "^16.12.0",
+    "react-dom": "^16.14.0",
+    "react-financial-charts": "^1.3.2",
     "react-helmet": "^6.1.0",
+    "react-jsx-highcharts": "^4.3.1",
+    "react-jsx-highstock": "^4.3.1",
     "react-reveal": "^1.2.2",
-    "react-scroll": "^1.8.4"
+    "react-scroll": "^1.8.4",
+    "react-select": "^5.2.2",
+    "react-stockcharts": "^0.7.8"
   },
   "devDependencies": {
     "prettier": "2.1.2"
