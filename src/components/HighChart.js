@@ -94,8 +94,8 @@ useEffect(() => {
             selected: 1,
         },
         xAxis: {
-            min: 1635566648,
-            max: 1643547848
+            min: Date.now()- 7778000,
+            max: Date.now()
         },
         yAxis: [{
             height: '70%',
