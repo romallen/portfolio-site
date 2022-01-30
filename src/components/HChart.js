@@ -1,11 +1,13 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import Highcharts from "highcharts/highstock";
+import {indicators} from "highcharts/indicators/indicators-all";
 import {
   HighchartsStockChart,
   AreaSplineSeries,
   SplineSeries,
   CandlestickSeries,
   OHLCSeries,
+  ColumnSeries,
   Chart,
   HighchartsProvider,
   XAxis,
@@ -15,14 +17,17 @@ import {
   Navigator,
   RangeSelector,
   Tooltip,
-  Ohlc,
+  Caption,
+  Series
+  
 } from 'react-jsx-highstock';
 import axios from 'axios';
 import Select from 'react-select';
 
+
 export default function HChart() {
   const [compOptions, setCompOptions] = useState([])
-  const [selCompany, setSelCompany] = useState('1834');
+  const [selCompany, setSelCompany] = useState("");
   const [data, setData] = useState([]);
   const [companiesInfo, setCompaniesInfo] = useState()
   const [ohlc, setOHLC] = useState([])
@@ -31,7 +36,7 @@ export default function HChart() {
   //let companyList; 
   useEffect(() => {
     fetchComp();
-    setSelCompany({value:"138SL", name: "138 Student Living Jamaica Limited "})
+    setSelCompany({value:"138SL", name: "138 Student Living Jamaica Limited"})
   }, []);
 
   useEffect(() => {
@@ -101,61 +106,75 @@ let fetchComp = async () => {
 
   
 return (
-      
+      // /highstock
     <div>
        <Select
         defaultValue={selCompany}
         onChange={setSelCompany}
         options={compOptions}
-        placeholder="Select a Company"
       />
-      <HighchartsProvider Highcharts={Highcharts}>
-        <HighchartsStockChart>
+      <HighchartsProvider Highcharts={Highcharts} >
+        <HighchartsStockChart  >
           <Chart zoomType="x" />
           <Title>{selCompany["name"]}</Title>
-
+  
+         
           <Legend>
-            <Legend.Title>Key</Legend.Title>
+            {/* <Legend.Title>Key</Legend.Title> */}
           </Legend>
-
+          <Caption>{"THIS IS A BLURB"}</Caption>
           <Tooltip />
+  
+          <useHighcharts ></useHighcharts>
 
           <XAxis>
-            <XAxis.Title>Time</XAxis.Title>
+            {/* <XAxis.Title>TIME</XAxis.Title> */}
           </XAxis>
 
-          <YAxis>
+          <YAxis height={"60%"}>
             <YAxis.Title>Price</YAxis.Title>
-            <CandlestickSeries id="profit" name={selCompany["name"]} data={ohlc}/>
+            <CandlestickSeries id="price" name={selCompany["name"]} data={ohlc}/>
             {/* <AreaSplineSeries id="profit" name="Profit" data={dataC} /> */}
           </YAxis>
 
-          {/* <YAxis opposite>
-            <YAxis.Title>Volume</YAxis.Title>
-            <SplineSeries id="twitter" name="Twitter mentions" data={volume} />
+         <YAxis height={"20%"} top={"60%"}>
+            <ColumnSeries id="volume" name="Volume" data={volume} yAxis={1}/>
+          </YAxis>
+          <YAxis height={"20%"} top={"80%"} id='volume' >
+            {/* <ColumnSeries  name="Volume" data={volume} /> */}
+
+            <Series type="macd" id= "overlay" data={data}  yAxis={2}></Series>
+          </YAxis>
+          {/* <YAxis>
+            <Series type="apo" id= "overlay" data={ohlc} ></Series>
           </YAxis> */}
 
-          <RangeSelector selected={7}>
-            <RangeSelector.Button count={1} type="month">
-              1m
-            </RangeSelector.Button>
-            <RangeSelector.Button count={3} type="month">
-              3m
-            </RangeSelector.Button>
-            <RangeSelector.Button count={6} type="month">
-              6m
-            </RangeSelector.Button>
-            <RangeSelector.Button count={1} type="year">
-              1y
-            </RangeSelector.Button>
-            <RangeSelector.Button type="all">All</RangeSelector.Button>
-            <RangeSelector.Input boxBorderColor="#7cb5ec" />
+          <RangeSelector >
+          
+              <RangeSelector.Button count={1} type="month" >
+                1m
+              </RangeSelector.Button>,
+              <RangeSelector.Button count={3} type="month">
+                3m
+              </RangeSelector.Button>,
+              <RangeSelector.Button count={6} type="month">
+                6m
+              </RangeSelector.Button>,
+              <RangeSelector.Button count={1} type="ytd">
+                YTD
+              </RangeSelector.Button>,
+              <RangeSelector.Button count={12} type="month">
+                1y
+              </RangeSelector.Button>,
+              <RangeSelector.Button type="all">All</RangeSelector.Button>
+              
+            {/* <RangeSelector.Input boxBorderColor="#7cb5ec" enabled="false"/> */}
           </RangeSelector>
 
-          <Navigator>
-            <Navigator.Series seriesId="profit" />
-            <Navigator.Series seriesId="twitter" />
-          </Navigator>
+          { <Navigator >
+            <Navigator.Series seriesId="price"  />
+            {/* {<Navigator.Series seriesId="volume" /> } */}
+          </Navigator> }
         </HighchartsStockChart>
       </HighchartsProvider>
     
