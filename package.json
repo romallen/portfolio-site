@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Romaine Allen",
   "dependencies": {
+    "@loadable/component": "^5.15.2",
     "amplify": "^0.0.11",
     "gatsby": "^2.26.1",
     "gatsby-image": "^2.11.0",

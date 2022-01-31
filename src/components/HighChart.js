@@ -3,9 +3,23 @@ import Highcharts from 'highcharts/highstock';
 import HighchartsReact from 'highcharts-react-official';
 import axios from 'axios';
 import Select from 'react-select';
-import indicators from 'highcharts/indicators/indicators-all'
+import dataModule from 'highcharts/modules/data';
+import exportingModule from 'highcharts/modules/exporting';
+import indicators from 'highcharts/indicators/indicators';
+import ema from 'highcharts/indicators/ema';
+import apo from 'highcharts/indicators/apo';
 
-
+if (typeof Highcharts === 'object') {
+  require("highcharts/modules/exporting")(Highcharts);
+  require("highcharts/modules/export-data")(Highcharts);
+  require("highcharts/modules/annotations")(Highcharts);
+  
+  require("highcharts/indicators/indicators-all")(Highcharts);
+  require("highcharts/modules/drag-panes")(Highcharts);
+  require("highcharts/modules/annotations-advanced")(Highcharts);
+  require("highcharts/modules/stock-tools")(Highcharts);
+  console.log("szfcsdgfusgfUKGBFKUASB,")
+}
 
 export default function HighSt() {
   const chartComponentRef = useRef(null);
@@ -16,15 +30,13 @@ export default function HighSt() {
   const [ohlc, setOHLC] = useState([])
   const [closePrices, setClosePrices] = useState([])
   const [volume, setVolume] = useState([])
-  const [options, setOptions] = useState()
+  const [options, setOptions] = useState("")
  // const [loading, setLoading] = useState(true)
-//  indicators(Highcharts)
-let ticker;
-// let now;
 
+let ticker;
+console.log(chartComponentRef)
 useEffect(() => {
-    indicators(Highcharts)
-  
+ 
     let fetchComp = async () => {
         let companyList = await axios.get("https://s3.ap-northeast-1.amazonaws.com/romallen.com/json/companies.json").then((res) => res.data)
         let compArr =  Object.values(companyList.companies)
@@ -69,77 +81,75 @@ useEffect(() => {
           data[i][4] // close
       ])
     }
-    ticker = selCompany["ticker"]
+    ticker = String(selCompany["ticker"])
     setOHLC(ohlcc)
     setVolume(volumec)
     setClosePrices(closePricesc)
-    //setLoading(false)
-//    now = volumec[volumec.length-1][0]
+    setOptions({
+      chart: {
+          height: 600,
+      },
+      title: {
+          text: String(selCompany["name"])
+      },
+      legend: {
+          enabled: true
+      },
+      rangeSelector: {
+          selected: 1,
+      },
+      xAxis: {
+          min: Date.now()- 7778000,
+          max: Date.now()
+      },
+      yAxis: [{
+          height: '70%',
+      }, {
+          top: '60%',
+          height: '15%',
+   
+      }, {
+          top: '80%',
+          height: '15%',
+      }],
+      plotOptions: {
+          series: {
+              showInLegend: true,
+      }},
+      series: [{
+          type: 'candlestick',
+          id: ticker,
+          name: "OHLC Prices",
+          data: ohlc
+      }, {
+          type: 'column',
+          id: 'volume',
+          name: 'Volume',
+          data: volume,
+          yAxis: 1
+      },
+       {
+          type: "ema",
+          id: 'overlay',
+          linkedTo: ticker,
+          yAxis: 0,
+      }, 
+      {
+          type: "apo",
+          id: 'oscillator',
+          linkedTo: ticker,
+          yAxis: 2,
+         
+      }
+          ],
+      caption: {
+          text: companiesInfo
+           }
+  })
   }, [data])
 
 
-  useEffect(()=>{
-  
-    setOptions({
-        chart: {
-            height: 600,
-        },
-        title: {
-            text: selCompany["name"]
-        },
-        legend: {
-            enabled: true
-        },
-        rangeSelector: {
-            selected: 1,
-        },
-        xAxis: {
-            min: Date.now()- 7778000,
-            max: Date.now()
-        },
-        yAxis: [{
-            height: '70%',
-        }, {
-            top: '60%',
-            height: '15%',
-     
-        }, {
-            top: '80%',
-            height: '15%',
-        }],
-        plotOptions: {
-            series: {
-                showInLegend: true,
-        }},
-        series: [{
-            type: 'candlestick',
-            id: ticker,
-            name: "OHLC Prices",
-            data: ohlc
-        }, {
-            type: 'column',
-            id: 'volume',
-            name: 'Volume',
-            data: volume,
-            yAxis: 1
-        },
-        //  {
-        //     type: "sma",
-        //     id: 'overlay',
-        //     linkedTo: ticker,
-        //     yAxis: 0,
-        // }, {
-        //     type: "macd",
-        //     id: 'oscillator',
-        //     linkedTo: ticker,
-        //     yAxis: 2
-        // }
-            ],
-        caption: {
-            text: companiesInfo
-             }
-    })
-  },[volume, companiesInfo, ohlc, selCompany])
+
 
 
 
@@ -152,7 +162,7 @@ useEffect(() => {
       .then((res) => {
         return res.data;
       });
-    setCompaniesInfo(d.splice(0,1))
+    setCompaniesInfo(d.splice(0,1)[0][2])
     setData(d);
   };
 //   if (loading) { 
@@ -173,7 +183,8 @@ useEffect(() => {
        options={options}
        constructorType = { 'stockChart' }
       ref={chartComponentRef}
- 
+      updateArgs={[true]}
+      allowChartUpdate={true}
       
     />
     </div>
