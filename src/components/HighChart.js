@@ -3,11 +3,7 @@ import Highcharts from 'highcharts/highstock';
 import HighchartsReact from 'highcharts-react-official';
 import axios from 'axios';
 import Select from 'react-select';
-import dataModule from 'highcharts/modules/data';
-import exportingModule from 'highcharts/modules/exporting';
-import indicators from 'highcharts/indicators/indicators';
-import ema from 'highcharts/indicators/ema';
-import apo from 'highcharts/indicators/apo';
+
 
 if (typeof Highcharts === 'object') {
   require("highcharts/modules/exporting")(Highcharts);
@@ -18,25 +14,79 @@ if (typeof Highcharts === 'object') {
   require("highcharts/modules/drag-panes")(Highcharts);
   require("highcharts/modules/annotations-advanced")(Highcharts);
   require("highcharts/modules/stock-tools")(Highcharts);
-  console.log("szfcsdgfusgfUKGBFKUASB,")
 }
 
 export default function HighSt() {
   const chartComponentRef = useRef(null);
   const [compOptions, setCompOptions] = useState([])
+  const [overOptions, setOverOptions] = useState([])
+  const [osciOptions, setOsciOptions] = useState([])
   const [selCompany, setSelCompany] = useState({value:"WISYNCO", name: "Wisynco Group Limited"});
+  const [over, setOverlay] = useState({value: "abands", label: "Acceleration Bands"});
+  const [osci, setOscillator] = useState({value: "apo", label: "Absolute price indicator"});
   const [data, setData] = useState([]);
   const [companiesInfo, setCompaniesInfo] = useState()
   const [ohlc, setOHLC] = useState([])
   const [closePrices, setClosePrices] = useState([])
   const [volume, setVolume] = useState([])
   const [options, setOptions] = useState("")
- // const [loading, setLoading] = useState(true)
+
 
 let ticker;
-console.log(chartComponentRef)
+
 useEffect(() => {
- 
+  setOverOptions([
+    {value: "abands", label: "Acceleration Bands"},
+    {value: "bb", label: "Bollinger Bands"},
+    {value: "dema", label: "DEMA (Double Exponential Moving Average)"},
+    {value: "ema", label: "EMA (Exponential Moving Average)"},
+    {value: "ikh", label: "Ichimoku Kinko Hyo"},
+    {value: "keltnerchannels", label: "Keltner Channels"},
+    {value: "linearRegression", label: "Linear Regression"},
+    {value: "pivotpoints", label: "Pivot Points"},
+    {value: "pc", label: "Price Channel"},
+    {value: "priceenvelopes", label: "Price Envelopes"},
+    {value: "psar", label: "PSAR (Parabolic SAR)"},
+    {value: "sma", label: "SMA (Simple Moving Average)"},
+    {value: "supertrend", label: "Super Trend"},
+    {value: "tema", label: "TEMA (Triple Exponential Moving Average)"},
+    {value: "vbp", label: "VbP (Volume by Price)"},
+    {value: "wma", label: "WMA (Weighted Moving Average)"},
+    {value: "vwap", label: "VWAP (Volume Weighted Average Price)"},
+    {value: "zigzag", label: "Zig Zag"}
+  ])
+  
+  setOsciOptions([
+    {value: "apo", label: "Absolute price indicator"},
+    {value: "ad", label: "A/D (Accumulation/Distribution)"},
+    {value: "aroon", label: "Aroon"},
+    {value: "aroonoscillator", label: "Aroon oscillator"},
+    {value: "atr", label: "ATR (Average True Range)"},
+    {value: "ao", label: "Awesome oscillator"},
+    {value: "cci", label: "CCI (Commodity Channel Index)"},
+    {value: "chaikin", label: "Chaikin"},
+    {value: "cmf", label: "CMF (Chaikin Money Flow)"},
+    {value: "disparityindex", label: "Disparity Index"},
+    {value: "cmo", label: "CMO (Chande Momentum Oscillator)"},
+    {value: "dmi", label: "DMI (Directional Movement Index)"},
+    {value: "dpo", label: "Detrended price"},
+    {value: "linearRegressionAngle", label: "Linear Regression Angle"},
+    {value: "linearRegressionIntercept", label: "Linear Regression Intercept"},
+    {value: "linearRegressionSlope", label: "Linear Regression Slope"},
+    {value: "klinger", label: "Klinger Oscillator"},
+    {value: "macd", label: "MACD (Moving Average Convergence Divergence)"},
+    {value: "mfi", label: "MFI (Money Flow Index)"},
+    {value: "momentum", label: "Momentum"},
+    {value: "natr", label: "NATR (Normalized Average True Range)"},
+    {value: "obv", label: "OBV (On-Balance Volume)"},
+    {value: "ppo", label: "Percentage Price oscillator"},
+    {value: "roc", label: "RoC (Rate of Change)"},
+    {value: "rsi", label: "RSI (Relative Strength Index)"},
+    {value: "slowstochastic", label: "Slow Stochastic"},
+    {value: "stochastic", label: "Stochastic"},
+    {value: "trix", label: "TRIX"},
+    {value: "williamsr", label: "Williams %R"}
+  ])
     let fetchComp = async () => {
         let companyList = await axios.get("https://s3.ap-northeast-1.amazonaws.com/romallen.com/json/companies.json").then((res) => res.data)
         let compArr =  Object.values(companyList.companies)
@@ -52,10 +102,12 @@ useEffect(() => {
     
   }, []);
 
+
   useEffect(() => {
     fetchData();
   }, [selCompany]);
   
+
   useEffect(()=> {
     let dataLen = data.length
     let ohlcc = [];
@@ -87,7 +139,7 @@ useEffect(() => {
     setClosePrices(closePricesc)
     setOptions({
       chart: {
-          height: 600,
+          height: 650,
       },
       title: {
           text: String(selCompany["name"])
@@ -129,13 +181,13 @@ useEffect(() => {
           yAxis: 1
       },
        {
-          type: "ema",
+          type: over["value"],
           id: 'overlay',
           linkedTo: ticker,
           yAxis: 0,
       }, 
       {
-          type: "apo",
+          type: osci["value"],
           id: 'oscillator',
           linkedTo: ticker,
           yAxis: 2,
@@ -146,11 +198,7 @@ useEffect(() => {
           text: companiesInfo
            }
   })
-  }, [data])
-
-
-
-
+  }, [data, over, osci])
 
 
 
@@ -165,19 +213,34 @@ useEffect(() => {
     setCompaniesInfo(d.splice(0,1)[0][2])
     setData(d);
   };
-//   if (loading) { 
-//     return (<div>Loading...</div>)
-//   }
+
 
   return (
     <div>
-  <Select
-    //  defaultValue={selCompany}
-    //  defaultInputValue={selCompany}
+     <div>
+     <Select
      onChange={setSelCompany}
      options={compOptions}
      placeholder={"Wisynco Group Limited"}
    />
+     </div>
+    
+      <span>
+      <Select
+     onChange={setOverlay}
+     options={overOptions}
+     placeholder={""}
+   />
+     <Select 
+     onChange={setOscillator}
+     options={osciOptions}
+     placeholder={""}
+   />
+      </span>
+
+     
+
+
     <HighchartsReact
       highcharts={Highcharts}
        options={options}
