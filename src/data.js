@@ -51,7 +51,7 @@ export default {
         "https://s3.ap-northeast-1.amazonaws.com/romallen.com/images/JSE+STOCK+APP.png",
       //Project URL - Add Your Project Url Here
       urlRepo: "https://github.com/romallen/jse-stock-scraper",
-      urlApp: "https://romallen.com/chart.html",
+      urlApp: "/chart",
     },
     {
       title: "Truck Stop Finder", //Project Title - Add Your Project Title Here
