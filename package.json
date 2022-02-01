@@ -24,12 +24,9 @@
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
     "react-helmet": "^6.1.0",
-    "react-jsx-highcharts": "^4.3.1",
-    "react-jsx-highstock": "^4.3.1",
     "react-reveal": "^1.2.2",
     "react-scroll": "^1.8.4",
-    "react-select": "^5.2.2",
-    "react-stockcharts": "^0.7.8"
+    "react-select": "^5.2.2"
   },
   "devDependencies": {
     "prettier": "2.1.2"

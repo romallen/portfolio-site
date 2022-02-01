@@ -26,7 +26,7 @@ export default function HighSt() {
   const [selCompany, setSelCompany] = useState({value:"138SL", name: "138 Student Living Jamaica Limited"});
   const [data, setData] = useState([]);
   const [companiesInfo, setCompaniesInfo] = useState([])
-  const [options, setOptions] = useState("")
+  const [options, setOptions] = useState()
 
 
 
@@ -37,7 +37,6 @@ useEffect( async () => {
         let compArr =  Object.values(companyList.companies)
         let opt = []
         compArr.forEach(element => {
-         
           opt.push({value: element["ticker"], label: element["name"]})
         });
         setCompOptions(opt)
@@ -83,7 +82,6 @@ useEffect( async () => {
     setOptions({
       chart: {
           height: 600,
-          
       },
       title: {
           text: companiesInfo[0]
