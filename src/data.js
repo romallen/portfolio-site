@@ -39,7 +39,7 @@ export default {
       imageSrc:
         "https://s3.ap-northeast-1.amazonaws.com/romallen.com/images/emina_text.png",
       //Project URL - Add Your Project Url Here
-      urlRepo: "https://github.com/YACT-jp/e-mina-backend",
+      urlRepo: "https://github.com/YACT-jp",
       urlApp: "https://play.google.com/store/apps/details?id=com.reactnativehello",
     },
     {
@@ -62,7 +62,7 @@ export default {
         "https://s3.ap-northeast-1.amazonaws.com/romallen.com/images/truckstop.png",
       //Project URL - Add Your Project Url Here
       urlRepo: "https://github.com/romallen/Truck-Stop-Finder",
-      uurlApp: "http://truck-stop-searcher.herokuapp.com/",
+      urlApp: "http://truck-stop-searcher.herokuapp.com/",
     },
     {
       title: "Quiz Game CRUD API", //Project Title - Add Your Project Title Here
