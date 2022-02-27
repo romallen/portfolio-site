@@ -3,7 +3,7 @@ import data from "../data"
 
 const Skills = () => {
   return (
-    <div className="section">
+    <div className="section" id="skill">
       <div className="container">
         <div className="skills-container">
           <h1>Skills</h1>

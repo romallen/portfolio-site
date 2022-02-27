@@ -1,10 +1,10 @@
 // Skills Icons
-import htmlIcon from "./images/html.svg"
-import cssIcon from "./images/css.svg"
 import reactIcon from "./images/react.svg"
 import jsIcon from "./images/javascript.svg"
-import designIcon from "./images/design.svg"
-import codeIcon from "./images/code.svg"
+import pythonIcon from "./images/python-5.svg"
+import postgresqlIcon from "./images/postgresql.svg"
+import awsIcon from "./images/aws-2.svg"
+import mongodbIcon from "./images/mongodb.svg"
 
 // Social Icon
 import githubIcon from "./images/github.svg"
@@ -121,34 +121,34 @@ export default {
 
   skills: [
     {
-      img: htmlIcon,
-      para:
-        "",
-    },
-    {
-      img: cssIcon,
-      para:
-        "",
-    },
-    {
       img: jsIcon,
       para:
-        "",
+        "Javascript",
+    },
+    {
+      img: pythonIcon,
+      para:
+        "Python 3",
     },
     {
       img: reactIcon,
       para:
-        "",
+        "React/React Native",
     },
     {
-      img: designIcon,
+      img: awsIcon,
       para:
-        "",
+        "AWS",
     },
     {
-      img: codeIcon,
+      img: mongodbIcon,
       para:
-        "",
+        "MongoDB",
+    },
+    {
+      img: postgresqlIcon,
+      para:
+        "PostreSQL",
     },
   ],
 
