@@ -50,7 +50,7 @@ export default {
       imageSrc:
         "https://s3.ap-northeast-1.amazonaws.com/romallen.com/images/JSE+STOCK+APP.png",
       //Project URL - Add Your Project Url Here
-      urlRepo: "https://github.com/romallen/jse-stock-scraper",
+      urlRepo: "https://github.com/romallen/jse-scraper",
       urlApp: "https://jse-chart.romallen.com/",
     },
     {
