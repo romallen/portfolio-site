@@ -7,7 +7,7 @@ const Header = () => {
     <div className="section" id="home">
       <div className="container">
         <div className="header-wrapper">
-          <Fade bottom>
+          <Fade left>
             <h2>
               Hi, I'm {data.name}{" "}
               <span role="img" aria-label="Emoji">
