@@ -1,5 +1,5 @@
 import React from "react"
-import Fade from "react-reveal/Fade"
+// import Fade from "react-reveal/Fade"
 import data from "../data"
 
 const Header = () => {
@@ -7,15 +7,15 @@ const Header = () => {
     <div className="section" id="home">
       <div className="container">
         <div className="header-wrapper">
-          <Fade left>
+          {/* <Fade left> */}
             <h2>
               Hi, I'm {data.name}{" "}
               <span role="img" aria-label="Emoji">
                 👋
               </span>
             </h2>
-          </Fade>
-          <Fade bottom cascade>
+          {/* </Fade>
+          <Fade bottom cascade> */}
             <div className="heading-wrapper">
                <h1>
                 {data.headerTagline[0]
@@ -35,10 +35,10 @@ const Header = () => {
                   : "and experiences"}
               </h1>
             </div>
-          </Fade>
-          <Fade bottom>
+          {/* </Fade>
+          <Fade bottom> */}
             <p>{data.headerParagraph}</p>
-          </Fade>
+          {/* </Fade> */}
           {/* <Fade bottom>
             <a
               href={`mailto:${
