@@ -32,6 +32,28 @@ export default {
   // Work Section ------------------------
   projects: [
     {
+      title: "JSE Web Scraper", //Project Title - Add Your Project Title Here
+      para:
+      "Data scraping and charting app for Jamaica Stock Exchange trading data.", // Add Your Service Type Here
+      //Project Image - Add Your Project Image Here
+      imageSrc:
+      "https://s3.ap-northeast-1.amazonaws.com/romallen.com/images/JSE+STOCK+APP.png",
+      //Project URL - Add Your Project Url Here
+      urlRepo: "https://github.com/romallen/jse-scraper",
+      urlApp: "https://jse-chart.romallen.com/",
+    },
+    {
+      title: "Jeopardy QuizApp", //Project Title - Add Your Project Title Here
+      para:
+      "A Jeopardy style quiz game built with React Native and MongoDB Realm.", // Add Your Service Type Here
+      //Project Image - Add Your Project Image Here
+      imageSrc:
+      "https://s3.ap-northeast-1.amazonaws.com/romallen.com/images/quizapp.png",
+      //Project URL - Add Your Project Url Here
+      urlRepo: "https://github.com/romallen/quiz-react-native",
+      urlApp: "https://quizapp.romallen.com",
+    },
+    {
       title: "E-Mina", //Project Title - Add Your Project Title Here
       para:
         "An android mobile app that helps users to find and visit real life locations from anime and movies.", // Add Your Service Type Here
@@ -41,17 +63,6 @@ export default {
       //Project URL - Add Your Project Url Here
       urlRepo: "https://github.com/YACT-jp",
       urlApp: "https://play.google.com/store/apps/details?id=com.reactnativehello",
-    },
-    {
-      title: "JSE Web Scraper", //Project Title - Add Your Project Title Here
-      para:
-        "Data scraping and charting app for Jamaica Stock Exchange trading data.", // Add Your Service Type Here
-      //Project Image - Add Your Project Image Here
-      imageSrc:
-        "https://s3.ap-northeast-1.amazonaws.com/romallen.com/images/JSE+STOCK+APP.png",
-      //Project URL - Add Your Project Url Here
-      urlRepo: "https://github.com/romallen/jse-scraper",
-      urlApp: "https://jse-chart.romallen.com/",
     },
     {
       title: "Truck Stop Finder", //Project Title - Add Your Project Title Here
@@ -64,7 +75,7 @@ export default {
       urlRepo: "https://github.com/romallen/Truck-Stop-Finder",
       urlApp: "http://truck-stop-searcher.herokuapp.com/",
     },
-    {
+   /* {
       title: "Quiz Game CRUD API", //Project Title - Add Your Project Title Here
       para:
         "A CRUD API service for a quiz game using Express.js, Node.js, Prisma & PostgreSQL.", // Add Your Service Type Here
@@ -75,17 +86,7 @@ export default {
       urlRepo: "https://github.com/romallen/Quiz-Game-API-Project",
       urlApp: "https://reqbin.com/8kljaach",
     },
-   /* {
-      title: "Jeopardy", //Project Title - Add Your Project Title Here
-      para:
-        "A quiz game built using React Native", // Add Your Service Type Here
-      //Project Image - Add Your Project Image Here
-      imageSrc:
-        "https://images.unsplash.com/photo-1534239143101-1b1c627395c5?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8NzZ8fHBhc3RlbHxlbnwwfHwwfA%3D%3D&auto=format&fit=crop&w=400&q=60",
-      //Project URL - Add Your Project Url Here
-        url: "https://github.com/romallen/QuizApp",
-    },
-    {
+     {
       title: "Project Six", //Project Title - Add Your Project Title Here
       para:
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.", // Add Your Service Type Here
