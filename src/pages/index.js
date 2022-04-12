@@ -1,11 +1,11 @@
 import React from "react"
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Layout from "../components/Layout"
+import SEO from "../components/Seo"
 // Components
 import Header from "../components/Header"
 import Work from "../components/Work"
-import Skills from "../components/skills"
+import Skills from "../components/Skills"
 import Footer from "../components/Footer"
 
 const IndexPage = () => (
